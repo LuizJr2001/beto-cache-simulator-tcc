@@ -1,28 +1,93 @@
-# Beto, o Simulador de Memória Cache
-[![GitHub license](https://img.shields.io/github/license/leo150250/simuladorCache?style=plastic)](https://github.com/leo150250/simuladorCache/blob/main/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/leo150250/simuladorCache?style=plastic)](https://github.com/leo150250/simuladorCache/stargazers) [![GitHub forks](https://img.shields.io/github/forks/leo150250/simuladorCache?style=plastic)](https://github.com/leo150250/simuladorCache/network)
+# Beto — Simulador Educacional de Memória Cache
 
-http://simuladorcache.leandrogabriel.net/
+O **Beto** é um simulador web, interativo, gratuito e de código aberto, desenvolvido para apoiar o ensino de memória cache e hierarquia de memória em disciplinas de Arquitetura e Organização de Computadores.
 
-## O que é? 🤨
+Este repositório mantém a evolução do simulador no contexto do Trabalho de Conclusão de Curso **“Avaliação e aprimoramento de um simulador educacional de memória cache para apoio ao ensino de hierarquia de memória”**, de Luiz Carlos dos Santos Júnior.
 
-O Beto é um simulador desenvolvido em HTML5, CSS3 e JavaScript que permite visualizar em tempo real e com interface interativa acessos à memória cache com configurações personalizáveis.
+## Objetivo do projeto
 
-Demos a ele o nome de Beto, em homenagem a Robert Dennard, considerado o "pai" da memória RAM de estado sólido como conhecemos hoje.
+O trabalho não propõe reconstruir o Beto do zero. Seu objetivo é avaliar a ferramenta existente, identificar lacunas técnicas e de Interação Humano-Computador (IHC), priorizar requisitos e implementar melhorias que tornem a simulação mais robusta, clara e útil para estudantes.
 
-## Como funciona? 🤔
+As principais frentes previstas são:
 
-Basta definir as configurações nos campos de entrada e, em seguida, clicar em "PLAY". Durante as etapas da simulação, você pode pausar clicando em "PAUSE" ou parar clicando em "STOP". Também é possível executar o algoritmo passo-a-passo, clicando em "STEP".
+- validar configurações e apresentar mensagens de erro didáticas;
+- melhorar a organização visual e corrigir desalinhamentos da interface;
+- tornar explícita a decomposição dos endereços em *tag*, índice/conjunto e deslocamento;
+- registrar o histórico dos acessos e destacar *hits*, *misses* e substituições;
+- exibir metadados internos, como estado LRU e bit de validade;
+- avaliar operações de leitura e escrita, políticas de escrita e *dirty bit*;
+- oferecer estatísticas, exportação de resultados e comparação entre configurações, conforme a viabilidade técnica;
+- avaliar a usabilidade e a experiência de uso por inspeção heurística e levantamento de requisitos com estudantes.
 
-Ao carregar o Beto pela primeira vez, ele traz uma configuração padrão e inicia a execução automaticamente.
+## Funcionalidades atuais
 
-## Tem bugs? 🛠
+O Beto permite configurar e acompanhar, em tempo real ou passo a passo:
 
-Sim, tem. Por exemplo, ao alterar alguns valores, certifique-se de que são potências de 2, senão você verá um monte de números decimais e o estilo da página não vai ficar dos melhores.
+- mapeamento direto, totalmente associativo e associativo por conjunto;
+- políticas de substituição FIFO, LRU e aleatória;
+- parâmetros da memória principal, dos blocos e da cache;
+- sequências de endereços de acesso;
+- execução por meio dos controles *play*, *pause*, *stop* e *step*;
+- visualização de acertos e faltas de cache.
 
-Além disso, ao inserir outros valores para um novo teste, o Beto ainda não atualiza. É necessário efetuar alguma mudança na configuração pra ele gerar a nova tabela de endereços para acesso.
+## Tecnologias
 
-Estamos trabalhando para corrigir o que já sabemos, mas nos avise se encontrar outro problema.
+- HTML5
+- CSS3
+- JavaScript
 
-## Porque isso tá assim? 🤣
+O simulador não exige instalação: abra [`docs/index.html`](docs/index.html) em um navegador ou acesse a versão publicada pelo GitHub Pages deste repositório.
 
-Dá um desconto! Ainda é um protótipo em versão beta. Foi feito rapidão, sabe... você nunca esteve de boa e de repente fez um simulador de memória cache? Pois é...
+## Estrutura do repositório
+
+```text
+.
+├── docs/               # aplicação web publicada pelo GitHub Pages
+├── tcc/                # material acadêmico do Trabalho de Conclusão de Curso
+├── CONTRIBUTING.md     # convenções de branches, commits e contribuição
+├── LICENSE
+└── readme.md
+```
+
+## Fluxo de desenvolvimento
+
+A branch `main` representa a versão estável do projeto. O desenvolvimento deve ocorrer em branches curtas, criadas a partir dela e nomeadas com um prefixo descritivo:
+
+| Prefixo | Uso | Exemplo |
+|---|---|---|
+| `feature/` | nova funcionalidade ou melhoria | `feature/validacao-configuracoes` |
+| `bugfix/` | correção de defeito não crítico | `bugfix/atualizacao-enderecos` |
+| `hotfix/` | correção crítica e urgente | `hotfix/falha-simulacao` |
+| `docs/` | alteração exclusivamente documental | `docs/guia-contribuicao` |
+| `refactor/` | refatoração sem mudança funcional | `refactor/logica-mapeamento` |
+| `test/` | criação ou ajuste de testes | `test/politica-lru` |
+
+Os nomes devem usar letras minúsculas e palavras separadas por hífen.
+
+## Padrão de commits
+
+O projeto adota o padrão [Conventional Commits 1.0.0](https://www.conventionalcommits.org/pt-br/v1.0.0/):
+
+```text
+<tipo>(escopo opcional): <descrição curta>
+```
+
+Exemplos:
+
+```text
+feat(cache): exibe estado lru por linha
+fix(config): valida valores que não são potências de dois
+docs: atualiza instruções de contribuição
+refactor(mapping): simplifica cálculo do índice
+test(lru): cobre substituição em conjunto cheio
+```
+
+Os tipos mais usados são `feat`, `fix`, `docs`, `refactor`, `test`, `style`, `perf`, `build`, `ci`, `chore` e `revert`. Mudanças incompatíveis devem usar `!` após o tipo/escopo ou incluir `BREAKING CHANGE:` no rodapé do commit.
+
+Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para o fluxo completo.
+
+## Origem e licença
+
+O Beto foi originalmente desenvolvido por Leandro Gabriel e colaboradores. O projeto original está disponível em [leo150250/simuladorCache](https://github.com/leo150250/simuladorCache).
+
+Este projeto é distribuído sob a licença [MIT](LICENSE).
