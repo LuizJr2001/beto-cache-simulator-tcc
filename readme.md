@@ -45,11 +45,14 @@ O simulador não exige instalação: abra [`docs/index.html`](docs/index.html) e
 ├── docs/               # aplicação web publicada pelo GitHub Pages
 ├── tcc/                # material acadêmico do Trabalho de Conclusão de Curso
 ├── CONTRIBUTING.md     # convenções de branches, commits e contribuição
+├── WORKFLOW.md         # metodologia, Kanban, issues e rastreabilidade
 ├── LICENSE
 └── readme.md
 ```
 
 ## Fluxo de desenvolvimento
+
+O planejamento das atividades utiliza **Kanban no GitHub Projects**, com requisitos, defeitos e tarefas acadêmicas registrados como issues. Consulte [WORKFLOW.md](WORKFLOW.md) para configurar o quadro, escrever e priorizar issues, definir critérios de aceitação e manter a rastreabilidade entre pesquisa, implementação e validação.
 
 A branch `main` representa a versão estável do projeto. O desenvolvimento deve ocorrer em branches curtas, criadas a partir dela e nomeadas com um prefixo descritivo:
 
@@ -84,7 +87,7 @@ test(lru): cobre substituição em conjunto cheio
 
 Os tipos mais usados são `feat`, `fix`, `docs`, `refactor`, `test`, `style`, `perf`, `build`, `ci`, `chore` e `revert`. Mudanças incompatíveis devem usar `!` após o tipo/escopo ou incluir `BREAKING CHANGE:` no rodapé do commit.
 
-Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para o fluxo completo.
+Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para as convenções técnicas e [WORKFLOW.md](WORKFLOW.md) para a metodologia completa de organização do trabalho.
 
 ## Origem e licença
 
