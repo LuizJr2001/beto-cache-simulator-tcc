@@ -1,6 +1,6 @@
 # Levantamento de requisitos com usuários
 
-Este diretório reúne os dados publicáveis do formulário **Levantamento de Requisitos para Aprimoramento do Simulador Beto**, aplicado no contexto do TCC entre 29 de maio e 12 de junho de 2026.
+Este diretório reúne os dados publicáveis do formulário **Levantamento de Requisitos para Aprimoramento do Simulador Beto**. O formulário ficou disponível entre 20 de maio e 17 de junho de 2026. Foram registradas 13 respostas, da primeira em 29 de maio à última em 12 de junho de 2026.
 
 ## Arquivos
 
