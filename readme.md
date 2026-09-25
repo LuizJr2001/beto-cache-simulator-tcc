@@ -1,12 +1,22 @@
-# Beto — Simulador Educacional de Memória Cache
+# Memora — Simulador Educacional de Memória Cache
 
-O **Beto** é um simulador web, interativo, gratuito e de código aberto, desenvolvido para apoiar o ensino de memória cache e hierarquia de memória em disciplinas de Arquitetura e Organização de Computadores.
+O **Memora** é um simulador web, interativo, gratuito e de código aberto, desenvolvido para apoiar o ensino de memória cache e hierarquia de memória em disciplinas de Arquitetura e Organização de Computadores.
+
+O Memora é a nova identidade do projeto de avaliação e aprimoramento do simulador **Beto**, preservando sua origem acadêmica e seu legado técnico, mas distinguindo a proposta revisada do sistema original.
 
 Este repositório mantém a evolução do simulador no contexto do Trabalho de Conclusão de Curso **“Avaliação e aprimoramento de um simulador educacional de memória cache para apoio ao ensino de hierarquia de memória”**, de Luiz Carlos dos Santos Júnior.
 
+## Decisão de identidade
+
+A partir de **25/09/2026**, a proposta aprimorada passa a se chamar **Memora**.
+
+A mudança de nome busca diferenciar claramente a nova proposta visual e educacional do simulador legado, dar identidade própria à evolução do projeto e, ao mesmo tempo, preservar a atribuição do Beto original. Materiais históricos, respostas do levantamento, capturas e arquivos do sistema original continuam usando o nome Beto quando isso for necessário para manter a fidelidade documental.
+
+A decisão está detalhada em [docs/decisoes/001-nome-memora.md](docs/decisoes/001-nome-memora.md).
+
 ## Objetivo do projeto
 
-O trabalho não propõe reconstruir o Beto do zero. Seu objetivo é avaliar a ferramenta existente, identificar lacunas técnicas e de Interação Humano-Computador (IHC), priorizar requisitos e implementar melhorias que tornem a simulação mais robusta, clara e útil para estudantes.
+O trabalho não propõe reconstruir o sistema legado do zero. Seu objetivo é avaliar a ferramenta existente, identificar lacunas técnicas e de Interação Humano-Computador (IHC), priorizar requisitos e implementar melhorias que tornem a simulação mais robusta, clara e útil para estudantes.
 
 As principais frentes previstas são:
 
@@ -21,7 +31,7 @@ As principais frentes previstas são:
 
 ## Funcionalidades atuais
 
-O Beto permite configurar e acompanhar, em tempo real ou passo a passo:
+O Memora permite configurar e acompanhar, em tempo real ou passo a passo:
 
 - mapeamento direto, totalmente associativo e associativo por conjunto;
 - políticas de substituição FIFO, LRU e aleatória;
@@ -91,6 +101,8 @@ Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para as convenções técnicas e [WO
 
 ## Origem e licença
 
-O Beto foi originalmente desenvolvido por Leandro Gabriel e colaboradores. O projeto original está disponível em [leo150250/simuladorCache](https://github.com/leo150250/simuladorCache).
+O **Beto**, sistema legado que deu origem ao Memora, foi originalmente desenvolvido por Leandro Gabriel e colaboradores. O projeto original está disponível em [leo150250/simuladorCache](https://github.com/leo150250/simuladorCache).
+
+A adoção do nome Memora não altera a atribuição da ferramenta original nem a rastreabilidade acadêmica das evidências coletadas durante o TCC.
 
 Este projeto é distribuído sob a licença [MIT](LICENSE).
