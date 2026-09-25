@@ -1,6 +1,6 @@
 # Metodologia de trabalho
 
-Este guia descreve como planejar, desenvolver, revisar e registrar as atividades do projeto Beto durante o Trabalho de Conclusão de Curso.
+Este guia descreve como planejar, desenvolver, revisar e registrar as atividades do projeto **Memora** durante o Trabalho de Conclusão de Curso.
 
 A metodologia adotada combina:
 
@@ -143,7 +143,7 @@ Classifique os itens usando valor educacional e esforço:
 | Baixo | Baixo | Fazer se houver tempo |
 | Baixo | Alto | Descartar ou registrar como trabalho futuro |
 
-Ordem inicial sugerida para o Beto:
+Ordem inicial sugerida para o Memora:
 
 1. validação das configurações;
 2. correção de erros e desalinhamentos;
