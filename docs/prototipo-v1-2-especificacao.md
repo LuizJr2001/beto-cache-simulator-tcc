@@ -15,6 +15,40 @@ O nome foi adotado para separar visual e conceitualmente a nova proposta do sist
 
 A decisão completa está registrada em `docs/decisoes/001-nome-memora.md`.
 
+## 0.1 Sistema visual adotado
+
+Após comparação de alternativas de design system, o protótipo passou a adotar o **Simple Design System (SDS)** como principal referência visual para as telas do Memora.
+
+A adoção do SDS não significa copiar uma biblioteca pronta. O sistema é usado como referência para:
+
+- superfícies claras e neutras;
+- cartões com bordas discretas e raio de 8 px;
+- hierarquia baseada em tipografia, espaçamento e contraste, evitando excesso de decoração;
+- botões primários escuros e ações secundárias claras;
+- campos com bordas simples e alinhamento consistente;
+- estados desabilitados visíveis, mas sem competir com ações disponíveis;
+- ícones de ajuda posicionados próximos ao limite direito dos respectivos componentes;
+- setas de campos de seleção alinhadas à borda direita;
+- cabeçalho, indicador de etapas e side sheets consistentes entre Configurar, Simular e Analisar.
+
+As cores didáticas específicas do domínio foram preservadas sobre essa base visual:
+
+- **Tag** — violeta;
+- **Conjunto** — ciano;
+- **Deslocamento** — teal;
+- **LENDO** — azul;
+- **ACERTO** — verde;
+- **FALTA** — âmbar;
+- **ERRO** — vermelho.
+
+A decisão de adotar SDS está registrada em `docs/decisoes/002-simple-design-system.md`.
+
+## 0.2 Marca e ícone
+
+A marca visível do projeto é **Memora**.
+
+O antigo bloco com a letra “B” foi removido. O cabeçalho utiliza agora um **ícone próprio de memória/cache**, fornecido no Figma e reaproveitado como fonte única para todas as telas. O ícone é redimensionado dentro do bloco de marca, preservando o mesmo arquivo visual em vez de recriações vetoriais aproximadas.
+
 ## 1. Estrutura geral
 
 O protótipo mantém o fluxo:
@@ -40,6 +74,18 @@ A tela de comparação foi atualizada para refletir o estado atual da proposta:
 - análise antes/depois e fluxo genérico de substituição.
 
 ## 3. Configuração
+
+A Tela 1 e suas variantes foram convertidas para o padrão SDS, incluindo:
+
+- tela principal;
+- totalmente associativo;
+- associativo por conjunto;
+- mapeamento direto;
+- casos inválidos;
+- ajudas contextuais 1.1–1.8;
+- overlays de Como funciona?, Glossário e Ajuda rápida.
+
+A revisão também corrigiu alinhamento dos seletores, ícones de ajuda, botões inferiores, mensagens de erro e espaçamentos entre rótulos e campos.
 
 ### 3.1 Mapeamentos
 
@@ -85,6 +131,17 @@ Também existem:
 - link externo para o **simulador original**.
 
 ## 4. Simulação
+
+Todas as telas da etapa Simular foram convertidas para SDS:
+
+- estado antes de iniciar;
+- execução principal;
+- microetapas;
+- ajudas contextuais;
+- modo binário;
+- estado concluído.
+
+A revisão padronizou métricas, controles, histórico, tabela da cache, estados vazios, ações desabilitadas e side sheets. O estado concluído preserva a barra de controles e apresenta o término sem sobrepor o histórico.
 
 ### 4.1 Estado antes de iniciar
 
@@ -133,6 +190,10 @@ Nenhuma delas depende do acesso atual.
 
 ## 5. Análise
 
+Todas as telas da etapa Analisar foram convertidas para SDS, incluindo as ajudas 3.1–3.4 e a demonstração binária.
+
+A organização final usa superfícies neutras, botão primário escuro, cartões antes/depois, destaque semântico para bloco que sai/entra e quatro passos didáticos estáticos.
+
 A Tela 3 mantém os dados dinâmicos necessários:
 
 - endereço analisado;
@@ -167,6 +228,10 @@ A V1.2 usa:
 - side sheets com cards consistentes;
 - alinhamento e espaçamento revisados;
 - correções de overflow e sobreposição em telas 1, 2 e 3;
+- padronização visual das três etapas pelo Simple Design System;
+- alinhamento de setas de seleção e ícones de ajuda;
+- estados finais e inválidos revisados para evitar elementos fora do container;
+- ícone de marca único reutilizado em todos os cabeçalhos;
 - cores conceituais separadas de cores de estado;
 - vermelho reservado a erros reais de entrada/configuração.
 
@@ -177,14 +242,14 @@ A especificação visual se relaciona diretamente com:
 - #25 — validação dos parâmetros;
 - #26 — validação dos endereços;
 - #28 — estado LRU e linha candidata;
-- #29 — reorganização visual, ajuda contextual e identidade visual;
+- #29 — reorganização visual, ajuda contextual, identidade visual e adoção do SDS;
 - #30 — preservação do bloco removido antes da mutação;
 - #31 — regressão dos mapeamentos e políticas;
 - #32 — load/store, dirty bit e políticas de escrita permanecem como trabalho futuro.
 
 ## 8. Status
 
-A V1.2 está consolidada como **especificação visual do Memora para revisão da orientadora e posterior implementação**.
+A V1.2 está consolidada como **especificação visual do Memora para validação com orientação e estudantes antes da implementação**.
 
 Ainda dependem de código e testes:
 
