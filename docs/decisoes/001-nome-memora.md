@@ -51,6 +51,12 @@ O nome Memora foi escolhido por:
 4. reduzir ambiguidade entre o objeto original avaliado no TCC e a evolução proposta;
 5. permitir expansão futura para outros conteúdos de hierarquia de memória, caso isso seja incorporado ao escopo.
 
+## Marca visual
+
+O Memora utiliza um ícone próprio de memória/cache no cabeçalho. O símbolo substitui o antigo bloco com a letra “B” e deve ser reutilizado a partir do mesmo ativo visual do Figma, apenas redimensionado conforme o contexto.
+
+A decisão é evitar recriações aproximadas do desenho: o ícone copiado para o protótipo passa a ser a referência visual única da marca.
+
 ## Consequências
 
 - A marca visível no Figma foi alterada de Beto para Memora.
