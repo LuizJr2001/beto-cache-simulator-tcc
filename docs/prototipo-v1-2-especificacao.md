@@ -1,11 +1,19 @@
-# Especificação visual do protótipo V1.2
+# Memora — Especificação visual do protótipo V1.2
 
 **Atualização:** 25/09/2026  
 **Figma:** https://www.figma.com/design/Zm8dzyoG0yhkbEkC01Zvu0?node-id=92-2
 
-Este documento consolida a especificação visual mais recente do Beto após revisão do legado, questionário com usuários, inspeção heurística de Nielsen e refinamentos sucessivos no Figma.
+Este documento consolida a especificação visual mais recente do **Memora**, nova identidade do projeto de aprimoramento do simulador educacional de memória cache, após revisão do sistema legado, questionário com usuários, inspeção heurística de Nielsen e refinamentos sucessivos no Figma.
 
 > Importante: este documento descreve a **especificação de interface e comportamento esperado**. Não significa que todos os itens já estejam implementados no código.
+
+## 0. Identidade do projeto
+
+A partir de **25/09/2026**, a proposta aprimorada passa a se chamar **Memora**.
+
+O nome foi adotado para separar visual e conceitualmente a nova proposta do sistema legado, sem apagar sua origem. A marca visível da nova interface passa a ser Memora; telas comparativas usam **simulador legado × Memora**; e materiais históricos podem continuar mencionando **Beto** quando isso for necessário para preservar contexto e fidelidade documental.
+
+A decisão completa está registrada em `docs/decisoes/001-nome-memora.md`.
 
 ## 1. Estrutura geral
 
@@ -74,7 +82,7 @@ Também existem:
 - **Glossário**;
 - **Ajuda rápida**;
 - link **GitHub**;
-- link externo para o Beto original.
+- link externo para o **simulador original**.
 
 ## 4. Simulação
 
@@ -106,11 +114,12 @@ O botão **Ver cache completa** foi removido por redundância e a antiga Tela 2.
 
 O histórico e os microestados usam semântica consistente:
 
-- **LENDO** — âmbar;
+- **LENDO** — azul;
 - **ACERTO** — verde;
-- **FALTA** — vermelho.
+- **FALTA** — âmbar;
+- **ERRO / configuração inválida** — vermelho.
 
-O resultado não depende apenas da cor: há texto e símbolo.
+A falta de cache é tratada como resultado normal da simulação, não como erro do estudante. O resultado não depende apenas da cor: há texto, símbolo e contexto.
 
 ### 4.4 Ajuda da simulação
 
@@ -157,7 +166,9 @@ A V1.2 usa:
 - botões globais homogêneos;
 - side sheets com cards consistentes;
 - alinhamento e espaçamento revisados;
-- correções de overflow e sobreposição em telas 1, 2 e 3.
+- correções de overflow e sobreposição em telas 1, 2 e 3;
+- cores conceituais separadas de cores de estado;
+- vermelho reservado a erros reais de entrada/configuração.
 
 ## 7. Relação com issues
 
@@ -166,14 +177,14 @@ A especificação visual se relaciona diretamente com:
 - #25 — validação dos parâmetros;
 - #26 — validação dos endereços;
 - #28 — estado LRU e linha candidata;
-- #29 — reorganização visual e ajuda contextual;
+- #29 — reorganização visual, ajuda contextual e identidade visual;
 - #30 — preservação do bloco removido antes da mutação;
 - #31 — regressão dos mapeamentos e políticas;
 - #32 — load/store, dirty bit e políticas de escrita permanecem como trabalho futuro.
 
 ## 8. Status
 
-A V1.2 está consolidada como **especificação visual para revisão da orientadora e posterior implementação**.
+A V1.2 está consolidada como **especificação visual do Memora para revisão da orientadora e posterior implementação**.
 
 Ainda dependem de código e testes:
 
