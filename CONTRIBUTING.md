@@ -1,6 +1,6 @@
 # Guia de contribuição
 
-Este documento define o fluxo de branches e commits utilizado no projeto Beto.
+Este documento define o fluxo de branches e commits utilizado no projeto **Memora**.
 
 ## Branches
 
